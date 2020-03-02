@@ -53,6 +53,7 @@ class CmdStanPyBackend(IStanBackend):
     def build_model(target_dir, model_dir):
         from shutil import copy
         import cmdstanpy
+        cmdstanpy.install_cmdstan()
         model_name = 'prophet.stan'
         target_name = 'prophet_model.bin'
 
