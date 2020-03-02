@@ -46,7 +46,8 @@ class BuildPyCommand(build_py):
             target_dir = os.path.join(self.build_lib, MODEL_TARGET_DIR)
             self.mkpath(target_dir)
             build_models(target_dir)
-
+        import cmdstanpy
+        cmdstanpy.install_cmdstan()
         build_py.run(self)
 
 
