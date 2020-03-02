@@ -264,7 +264,6 @@ class PyStanBackend(IStanBackend):
 
 
 class StanBackendEnum(Enum):
-    PYSTAN = PyStanBackend
     CMDSTANPY = CmdStanPyBackend
 
     @staticmethod
