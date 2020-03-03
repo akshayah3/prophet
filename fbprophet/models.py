@@ -56,8 +56,8 @@ class CmdStanPyBackend(IStanBackend):
 
         model_name = 'prophet.stan'
         target_name = 'prophet_model.bin'
-
-        sm = cmdstanpy.Model(stan_file=os.path.join(model_dir, model_name))
+        cmdstanpy.install_cmdstan()
+        sm = cmdstanpy.CmdStanModel(stan_file=os.path.join(model_dir, model_name))
         sm.compile()
         copy(sm.exe_file, os.path.join(target_dir, target_name))
 
