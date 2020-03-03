@@ -67,7 +67,7 @@ class CmdStanPyBackend(IStanBackend):
             'fbprophet',
             'stan_model/prophet_model.bin',
         )
-        return cmdstanpy.Model(exe_file=model_file)
+        return cmdstanpy.CmdStanModel(exe_file=model_file)
 
     def fit(self, stan_init, stan_data, **kwargs):
         (stan_init, stan_data) = self.prepare_data(stan_init, stan_data)
